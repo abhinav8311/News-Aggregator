@@ -32,7 +32,8 @@ function Login() {
     
     try {
       // Send login data to the backend
-      const response = await axios.post('http://localhost:5000/api/users/login', {
+  // Use shared api instance for correct baseURL
+  const response = await api.post('/api/users/login', {
         email: formData.email,
         password: formData.password
       });
