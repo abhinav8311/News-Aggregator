@@ -45,8 +45,16 @@ setInterval(async () => {
 // Initialize Express
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",        // local dev
+  "https://news-aggregator-8ne4.vercel.app/" // deployed frontend
+];
+
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true   // 👈 required if using cookies
+}));
 app.use(express.json());
 
 // Routes
