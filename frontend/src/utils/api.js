@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 
-const API_URL = import.meta.env.VITE_API_URL;
+// Make sure VITE_API_URL is set in Vercel to your Render backend URL
+const API_URL = import.meta.env.VITE_API_URL || "https://news-aggregator-xy6i.onrender.com"; // fallback for local testing
 
 const api = axios.create({
   baseURL: API_URL,

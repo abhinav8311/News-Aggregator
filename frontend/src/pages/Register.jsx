@@ -45,7 +45,7 @@ function Register() {
     
     try {
       // Send registration data to the backend
-      const response = await axios.post('http://localhost:5000/api/users/register', {
+  const response = await api.post('/api/users/register', {
         username: formData.username,
         email: formData.email,
         password: formData.password
