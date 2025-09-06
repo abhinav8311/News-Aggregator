@@ -48,6 +48,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",        // local dev
   "https://news-aggregator-8ne4.vercel.app", // deployed frontend (no trailing slash)
+  "https://newsaggregatormern.vercel.app", // current deployed frontend
   // Add more domains if you use Vercel preview URLs or custom domains
 ];
 
